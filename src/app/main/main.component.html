@@ -1,0 +1,50 @@
+<div class="box-it">
+    <form [formGroup]="form" (ngSubmit)="onSubmitOrder()">
+      <table>
+        <tr>
+          <td> <label for="name">Name:</label> </td>
+          <td>
+            <input type="text" size="50" id="name" placeholder="Your name" formControlName="name">
+          </td>
+        <tr>
+          <td> <label for="email">Email:</label> </td>
+          <td>
+            <input type="email" size="50" id="email" placeholder="Your email" formControlName="email">
+          </td>
+        </tr>
+        <tr>
+          <td> <label for="phone">Phone:</label> </td>
+          <td>
+            <input type="email" size="50" id="phone" placeholder="Your phone number" formControlName="phone">
+          </td>
+        </tr>
+        <tr>
+          <td> <label for="title">Title:</label> </td>
+          <td>
+            <input type="title" size="50" id="title" placeholder="Item name" formControlName="title">
+          </td>
+        </tr>
+        <tr>
+          <td><label for="description">Description:</label></td>
+          <td>
+            <textarea id="description" cols="40" rows="5" formControlName="description"></textarea>
+          </td>
+        </tr>
+        <tr> 
+            <input type="image" size="50" id="title" placeholder="image" formControlName="image">
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <div class="justify-right">
+                <button type="button" [routerLink]="['/']">Clear</button>
+            </div>
+            <div class="justify-right">
+              <button type="submit" [disabled]="form.invalid">Post</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  

@@ -1,0 +1,12 @@
+<h1>Thank You</h1>
+<div *ngIf="orders.length <= 0">
+    <p>You do have any orders</p>
+</div>
+<div *ngIf="orders.length > 0">
+    <div *ngFor="let order of orders" class="black-border space-around">
+        <p>Thank you for using our service. Your posting id is {{order.postingid}}</p>
+    </div>
+</div>
+<div class="space-around">
+    <button type="button" [routerLink]="['/']">Back</button>
+</div>
